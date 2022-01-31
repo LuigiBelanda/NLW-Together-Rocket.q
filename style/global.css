@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  display: flex;
   height: 100vh;
   background: var(--background);
 }
@@ -51,7 +52,7 @@ textarea {
   margin: 0 auto;
 }
 
-/* acessibilidade */
+/* acessibilidade - lógica para esconder elementos da tela, mas que os leitores de tela consigam ver ainda*/
 .sr-only {
   position: absolute;
   height: 1px;
