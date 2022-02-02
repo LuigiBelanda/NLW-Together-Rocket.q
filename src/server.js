@@ -11,6 +11,9 @@ server.set("views", path.join(__dirname, "views"));
 // Config da pasta public (css, images e scripts)
 server.use(express.static("public"));
 
+// middleware
+server.use(express.urlencoded({ extended: true }));
+
 server.use(route);
 
 // iniciando o server
