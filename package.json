@@ -4,7 +4,7 @@
   "description": "Projeto Rocket.Q - Gerenciador de perguntas anônimas de usuários para uma determinada pessoa - NLW TOGETHER DISCOVER (Rocketseat)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
