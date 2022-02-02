@@ -34,6 +34,16 @@ function handleClick(event, check = true) {
   // as tags "a" deixam de se comportar de certa forma como links
   event.preventDefault();
 
+  // form / action (pegando as infos)
+  const slug = check ? "check" : "delete";
+
+  const questionId = event.target.dataset.id;
+  const roomId = document.querySelector("#room-id").dataset.id;
+
+  const form = document.querySelector(".modal form");
+  form.setAttribute("action", `/room/${roomId}/${questionId}/${slug}`);
+
+  // mudando HTML da modal
   const text = check ? "Marcar como lida" : "Excluir";
 
   modalTitle.innerHTML = `${text} esta pergunta`;
@@ -44,5 +54,6 @@ function handleClick(event, check = true) {
     ? modalButton.classList.remove("red")
     : modalButton.classList.add("red");
 
+  // abre a modal
   modal.open();
 }
