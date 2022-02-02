@@ -29,9 +29,9 @@ module.exports = {
     if (!isRoom) {
       // Inseri a sala no banco
       await db.run(`INSERT INTO rooms (
-      id, 
-      pass
-      ) vALUES (
+        id, 
+        pass
+      ) VALUES (
         ${parseInt(roomId)},
         ${pass}
       )`);
@@ -40,5 +40,10 @@ module.exports = {
     await db.close();
 
     res.redirect(`/room/${roomId}`);
+  },
+
+  open(req, res) {
+    const roomId = req.params.room;
+    res.render("room", { roomId: roomId });
   },
 };
