@@ -1,0 +1,24 @@
+{
+  "name": "nlw-together-rocket.q",
+  "version": "1.0.0",
+  "description": "Projeto Rocket.Q - Gerenciador de perguntas anônimas de usuários para uma determinada pessoa - NLW TOGETHER DISCOVER (Rocketseat)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuigiBelanda/NLW-Together-Rocket.q.git"
+  },
+  "keywords": [],
+  "author": "Luigi Belanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuigiBelanda/NLW-Together-Rocket.q/issues"
+  },
+  "homepage": "https://github.com/LuigiBelanda/NLW-Together-Rocket.q#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2"
+  }
+}

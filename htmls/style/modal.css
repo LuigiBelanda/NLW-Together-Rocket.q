@@ -1,3 +1,9 @@
+/* quando tivermos a class active no modal-wrapper iremos conseguir ver a modal em si */
+.modal-wrapper.active {
+  visibility: visible;
+  opacity: 1;
+}
+
 .modal-wrapper {
   position: fixed;
   width: 100vw;
@@ -8,6 +14,9 @@
 
   /* cor com opacidade */
   background: rgba(4, 9, 17, 0.8);
+
+  visibility: hidden;
+  opacity: 0;
 }
 
 .modal-wrapper .modal {
