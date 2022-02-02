@@ -8,7 +8,7 @@ const server = express();
 server.set("view engine", "ejs");
 server.set("views", path.join(__dirname, "views"));
 
-// Config da pasta public (css e images)
+// Config da pasta public (css, images e scripts)
 server.use(express.static("public"));
 
 server.use(route);
