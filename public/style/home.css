@@ -17,7 +17,7 @@ header {
 #bg {
   grid-area: left;
   /* top/contain fixa a imagem no top e determina que fique dentro da div */
-  background: url("/assets/home-bg-img.svg") no-repeat top/contain;
+  background: url("/images/home-bg-img.svg") no-repeat top/contain;
   /* usamos o background-position quando precisamos mover só a imagem*/
   /* se usarmos margin iremos mover a div inteira */
   background-position-x: -10rem;
