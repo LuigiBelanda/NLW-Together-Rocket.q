@@ -15,3 +15,13 @@ checkButtons.forEach((button) => {
     modal.open();
   });
 });
+
+// pega todas as tags "a" com a class "delete" dentro de algo com a class "actions"
+const deleteButton = document.querySelectorAll(".actions a.delete");
+
+// escuta o evento e abre a modal, mesma coisa com o código acima
+deleteButton.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    modal.open();
+  });
+});
