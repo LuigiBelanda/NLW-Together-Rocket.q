@@ -6,7 +6,7 @@ module.exports = {
     const pass = req.body.password;
 
     let roomId;
-    let isRoom = false;
+    let isRoom = true;
 
     while (isRoom) {
       // gera o número da sala
@@ -42,8 +42,20 @@ module.exports = {
     res.redirect(`/room/${roomId}`);
   },
 
-  open(req, res) {
+  async open(req, res) {
+    const db = await Database();
     const roomId = req.params.room;
-    res.render("room", { roomId: roomId });
+
+    // pegando as questões no db da sala que estamos
+    const questions = await db.all(
+      `SELECT * FROM questions WHERE room = ${roomId} and read = 0`
+    );
+
+    // pegando as questões lidas
+    const questionsRead = await db.all(
+      `SELECT * FROM questions WHERE room = ${roomId} and read = 1`
+    );
+
+    res.render("room", { roomId: roomId, questions: questions, questionsRead: questionsRead });
   },
 };
